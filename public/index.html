@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Attendance Management System</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="navbar">
+        <div class="content" id="datesearch">
+          <h2 id="date-search">Date Search</h2>
+          <form class="search-form">
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date" />
+            <input type="submit" value="Search" />
+          </form>
+          <button id="report-button">Generate Report</button>
+        </div>
+      </div>
+      <div class="content" id="form-main-div" style="display: none">
+        <h2 class="list-title">Student List</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Present/Absent</th>
+            </tr>
+          </thead>
+        </table>
+        <form id="attendance-form">
+          <ul>
+            <li>
+              Ajay <input type="radio" name="Ajay" value="1" /> Present
+              <input type="radio" name="Ajay" value="0" /> Absent
+            </li>
+          </ul>
+          <ul>
+            <li>
+              Shivam <input type="radio" name="Shivam" value="1" /> Present
+              <input type="radio" name="Shivam" value="0" /> Absent
+            </li>
+          </ul>
+          <ul>
+            <li>
+              Gaurav <input type="radio" name="Gaurav" value="1" /> Present
+              <input type="radio" name="Gaurav" value="0" /> Absent
+            </li>
+          </ul>
+          <ul>
+            <li>
+              Ritik <input type="radio" name="Ritik" value="1" /> Present
+              <input type="radio" name="Ritik" value="0" /> Absent
+            </li>
+          </ul>
+          <ul>
+            <li>
+              Adom <input type="radio" name="Adom" value="1" /> Present
+              <input type="radio" name="Adom" value="0" /> Absent
+            </li>
+          </ul>
+          <ul>
+            <li>
+              Harry <input type="radio" name="Harry" value="1" /> Present
+              <input type="radio" name="Harry" value="0" /> Absent
+            </li>
+          </ul>
+          <ul>
+            <li>
+              Rohit <input type="radio" name="Rohit" value="1" /> Present
+              <input type="radio" name="Rohit" value="0" /> Absent
+            </li>
+          </ul>
+          <ul>
+            <li>
+              Kaushal <input type="radio" name="Kaushal" value="1" /> Present
+              <input type="radio" name="Kaushal" value="0" /> Absent
+            </li>
+          </ul>
+          <input type="submit"  value="Mark Attendance" />
+        </form>
+      </div>
+
+      <div class="content" id="attendece-main-div" style="display: none">
+        <h2 class="list-title">Attendance Already Marked</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Present/Absent</th>
+            </tr>
+          </thead>
+          <tbody class="content" id="attendece-body"></tbody>
+        </table>
+      </div>
+
+      <div class="content" id="report-main-div" style="display: none">
+        <h2 class="list-title">Attendance Report</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Total Present/Absent</th>
+              <th>Percentage</th>
+            </tr>
+          </thead>
+          <tbody class="content" id="report-body"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
